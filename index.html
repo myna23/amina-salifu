@@ -7,7 +7,7 @@
   <style>
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      max-width: 900px;
+      max-width: 950px;
       margin: 40px auto;
       padding: 0 16px;
       line-height: 1.7;
@@ -21,8 +21,12 @@
       font-size: 2.3rem;
     }
     h2 {
-      font-size: 1.3rem;
+      font-size: 1.35rem;
       margin-top: 2rem;
+    }
+    h3 {
+      font-size: 1.05rem;
+      margin-top: 1rem;
     }
     .subtitle {
       color: #555;
@@ -37,7 +41,7 @@
       text-decoration: underline;
     }
     .section {
-      margin-bottom: 1.6rem;
+      margin-bottom: 1.7rem;
     }
     .contact a {
       margin-right: 14px;
@@ -56,6 +60,15 @@
     .edu-meta {
       font-size: 0.95rem;
       color: #555;
+    }
+    .nav {
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.8rem;
+      border-bottom: 1px solid #ddd;
+      font-size: 0.95rem;
+    }
+    .nav a {
+      margin-right: 12px;
     }
   </style>
 </head>
@@ -76,113 +89,168 @@
     </div>
   </header>
 
+  <!-- Simple navigation -->
+  <nav class="nav">
+    <a href="#about">About</a>
+    <a href="#academics">Academics</a>
+    <a href="#skills">Skills</a>
+    <a href="#publications">Publications</a>
+    <a href="#experience">Experience</a>
+    <a href="#service">Service</a>
+    <a href="#awards">Awards</a>
+  </nav>
+
   <!-- About -->
-  <section class="section">
-    <h2>About</h2>
+  <section id="about" class="section">
+    <h2>A Bit About Me</h2>
     <p>
-      I am a computer engineer and data scientist with a strong background in
-      mathematical sciences and artificial intelligence. My research focuses on
-      speech technologies for African accents, IoT systems, and inclusive AI –
-      building models that are robust, fair, and useful in low-resource
-      settings.
+      I am a computer engineer and data scientist with a background in mathematical
+      sciences and artificial intelligence. My work focuses on speech technologies
+      for non-native and Ghanaian English accents, communication-efficient IoT
+      systems, and inclusive AI. I enjoy building models and tools that are robust,
+      practical, and fair for people in low-resource settings.
     </p>
   </section>
 
-  <!-- Education -->
-  <section class="section">
-    <h2>Education</h2>
+  <!-- Academics -->
+  <section id="academics" class="section">
+    <h2>Academics</h2>
 
     <div class="edu-item">
       <div class="edu-title">PhD in Computer Engineering</div>
       <div class="edu-meta">
-        Kwame Nkrumah University of Science and Technology (KNUST), Ghana ·
-        November 2025
+        Kwame Nkrumah University of Science and Technology (KNUST), Ghana · Nov 2025
       </div>
     </div>
 
     <div class="edu-item">
       <div class="edu-title">MSc in Mathematical Sciences</div>
       <div class="edu-meta">
-        African Institute for Mathematical Sciences (AIMS), August 2022
+        African Institute for Mathematical Sciences (AIMS), Senegal · Aug 2022
       </div>
     </div>
 
     <div class="edu-item">
       <div class="edu-title">BSc in Mathematical Sciences (GPA: 4.09)</div>
       <div class="edu-meta">
-        University for Development Studies (UDS), June 2021
+        University for Development Studies (UDS), Ghana · Jun 2021
       </div>
     </div>
   </section>
 
-  <!-- Research Interests -->
-  <section class="section">
-    <h2>Research Interests</h2>
+  <!-- Skills -->
+  <section id="skills" class="section">
+    <h2>Technical &amp; Soft Skills</h2>
+    <h3>Languages</h3>
     <ul>
-      <li>Accent classification and accent similarity</li>
-      <li>Speech recognition for Ghanaian and African accents</li>
-      <li>IoT and data reduction for wireless sensor networks</li>
-      <li>Inclusive and responsible AI for low-resource communities</li>
+      <li>Python, R, MATLAB, HTML, CSS, MINITAB</li>
+    </ul>
+
+    <h3>Tools</h3>
+    <ul>
+      <li>Git, LaTeX, Microsoft Office, PowerPoint, Publisher, Sublime Text</li>
+    </ul>
+
+    <h3>Soft Skills</h3>
+    <ul>
+      <li>Time management, teamwork, communication, leadership, problem solving</li>
+      <li>Report writing, public speaking, verbal &amp; written communication</li>
+      <li>Data collection and organisation</li>
     </ul>
   </section>
 
-  <!-- Publications -->
-  <section class="section">
-    <h2>Publications &amp; Manuscripts</h2>
+  <!-- Publications / Research -->
+  <section id="publications" class="section">
+    <h2>Research Projects &amp; Publications</h2>
     <ul>
       <li>
         <strong>Data Transmission Reduction in Internet of Things Wireless Sensor Networks.</strong><br />
-        (Published) – Focus on communication-efficient data transmission for IoT wireless sensor networks.
+        Published. Proposes data transmission reduction techniques for wireless sensor networks in IoT.
       </li>
       <li>
         <strong>Enhancing Speech Recognition through Diverse Shared Features Accent Classification.</strong><br />
-        (Published) – Proposes diverse shared feature representations to improve accent classification and ASR.
+        Published. Develops accent classification features that improve downstream speech recognition.
       </li>
       <li>
         <strong>A Systematic Review of Accent Classification Techniques and Datasets for Inclusive Speech Recognition.</strong><br />
-        (Accepted) – Survey of methods and datasets for accent classification with emphasis on inclusivity.
+        Accepted. Reviews methods and datasets for accent classification with an emphasis on inclusivity.
       </li>
       <li>
         <strong>Improving Speech Recognition for Ghanaian Accents Using Transformer-Based Accent Classification.</strong><br />
-        (Published) – Uses transformer-based models to improve recognition performance for Ghanaian English accents.
+        Published. Uses transformer-based accent models to boost recognition accuracy for Ghanaian English accents.
       </li>
       <li>
         <strong>CNN-Based Accent Similarity Detection Using Masked Spectrogram Reconstruction.</strong><br />
-        (Under Revision) – CNN model for accent similarity using masked spectrogram reconstruction.
+        In revision. Investigates accent similarity using CNNs and masked spectrogram reconstruction.
+      </li>
+      <li>
+        <strong>Applications of Linear Algebra in Data Science.</strong><br />
+        Coursework project connecting linear algebra concepts with real-world data-science problems.
+      </li>
+      <li>
+        <strong>AI Smart Bot for Data Collection of Non-Native English Speakers.</strong><br />
+        Prototype conversational system for collecting speech and demographic data from non-native speakers.
       </li>
     </ul>
   </section>
 
-  <!-- Selected Projects -->
-  <section class="section">
-    <h2>Selected Projects</h2>
+  <!-- Experience -->
+  <section id="experience" class="section">
+    <h2>Professional &amp; Internship Experience</h2>
+
+    <h3>Internships</h3>
     <ul>
-      <li>
-        <strong>Applications of Linear Algebra in Data Science</strong> – 
-        course-aligned project demonstrating linear algebra concepts in real-world data problems.
-      </li>
-      <li>
-        <strong>AI Smart Bot for Data Collection of Non-Native English Speakers</strong> – 
-        conversational system for collecting speech data from non-native English speakers.
-      </li>
+      <li>Hadniva Multimedia – Intern (Oct 2019 – Jan 2020)</li>
+      <li>Brigham Healthcare Service – Intern (May 2019 – Mar 2022)</li>
+      <li>Millennium Development Authority – Intern (Oct 2020 – Nov 2020)</li>
+      <li>Consolidated Bank Ghana – Intern (Oct 2020 – Dec 2020)</li>
+      <li>World Bank – Intern (Sep 2025 – Oct 2026)</li>
     </ul>
   </section>
 
-  <!-- Community & Service -->
-  <section class="section">
-    <h2>Community &amp; Service</h2>
-    <p>
-      I actively volunteer with initiatives such as Fondation Save Child, GIMPACT
-      Data Fellows, AI Ghana, Women in Machine Learning Ghana, and Ghana Data Science,
-      and I regularly return to the community through teaching and mentorship.
-    </p>
+  <!-- Service -->
+  <section id="service" class="section">
+    <h2>Volunteer Service &amp; Community</h2>
+    <ul>
+      <li>Fondation Save Child</li>
+      <li>Brigham Health Service</li>
+      <li>GIMPACT Data Fellows</li>
+      <li>AI Ghana</li>
+      <li>Women in Machine Learning – Ghana Chapter</li>
+      <li>Ghana Data Science community</li>
+      <li>Teaching and outreach activities in local communities</li>
+    </ul>
+
+    <h3>Workshops &amp; Conferences</h3>
+    <ul>
+      <li>NeurIPS (Vancouver, 2024)</li>
+      <li>Deep Learning Indaba (Dakar 2024; Rwanda 2025)</li>
+      <li>IndabaX Ghana (2023, 2024)</li>
+      <li>African Conference of Women Engineers and Scientists (Kigali)</li>
+      <li>PyCon Africa (Accra)</li>
+      <li>Pan-African AI and Smart Systems (Dakar)</li>
+      <li>EAUMP School on Mathematical Programming and Algorithms (Nairobi)</li>
+      <li>3i Africa Summit (Accra)</li>
+      <!-- You can add or remove items as you like -->
+    </ul>
+  </section>
+
+  <!-- Awards -->
+  <section id="awards" class="section">
+    <h2>Awards &amp; Scholarships</h2>
+    <ul>
+      <li>Scholarships for undergraduate, master’s, and doctoral studies in Mathematical Sciences and Computer Engineering.</li>
+      <li>Best poster awards at Deep Learning Indaba (2023, 2024) and Ghana Data Science Summit / IndabaX (2025).</li>
+      <li>Travel grant and accommodation support to attend NeurIPS 2024 in Vancouver.</li>
+      <li>Best poster award at Deep Learning Indaba, Rwanda 2025.</li>
+    </ul>
   </section>
 
   <!-- Contact -->
   <section class="section">
     <h2>Contact</h2>
     <p>
-      For collaborations, student supervision, or speaking invitations, please reach out via
+      For collaborations, student mentorship, or speaking invitations, please reach out via
       <a href="mailto:aminasalidu291@gmail.com">email</a>.
     </p>
   </section>
