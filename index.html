@@ -4,215 +4,419 @@
   <meta charset="UTF-8" />
   <title>Amina Salifu – AI & NLP Researcher</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Amina Salifu — AI, NLP, Speech Technology, and Inclusive AI researcher. Publications, research interests, and contact." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://myna23.github.io/amina-salifu/" />
+
+  <!-- Open Graph / LinkedIn -->
+  <meta property="og:title" content="Amina Salifu – AI & NLP Researcher" />
+  <meta property="og:description" content="AI • NLP • Speech Technology • Inclusive AI — Publications, research interests, and contact." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://myna23.github.io/amina-salifu/" />
+  <meta property="og:image" content="https://myna23.github.io/amina-salifu/profile.jpg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Amina Salifu – AI & NLP Researcher" />
+  <meta name="twitter:description" content=" AI • NLP • Speech Technology • Inclusive AI — Publications, research interests, and contact." />
+  <meta name="twitter:image" content="https://myna23.github.io/amina-salifu/profile.jpg" />
+
+  <!-- Structured Data (Google indexing) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Amina Salifu",
+    "jobTitle": "AI & NLP Researcher",
+    "url": "https://myna23.github.io/amina-salifu/",
+    "image": "https://myna23.github.io/amina-salifu/profile.jpg",
+    "email": "mailto:aminasalidu291@gmail.com",
+    "sameAs": [
+      "https://github.com/myna23",
+      "https://www.linkedin.com/in/amina-salifu-7476311a3"
+    ],
+    "affiliation": {
+      "@type": "Organization",
+      "name": "KNUST"
+    }
+  }
+  </script>
 
   <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      max-width: 850px;
-      margin: 40px auto;
-      padding: 0 16px;
-      line-height: 1.6;
-      color: #222;
-      background: #fafafa;
+    :root{
+      --bg:#fafafa; --card:#ffffff; --text:#222; --muted:#555; --border:#ddd;
+      --link:#0066cc; --btn:#0066cc; --shadow:0 8px 24px rgba(0,0,0,.06);
+    }
+    [data-theme="dark"]{
+      --bg:#0b0f19; --card:#121a2a; --text:#e9edf6; --muted:#b6c0d6; --border:#26334f;
+      --link:#7ab7ff; --btn:#7ab7ff; --shadow:0 10px 28px rgba(0,0,0,.35);
     }
 
-    h1 {
-      font-size: 2.3rem;
-      margin-bottom: 0.2em;
+    body{
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      margin:0;
     }
 
-    h2 {
-      font-size: 1.3rem;
-      margin-top: 2rem;
+    .container{
+      max-width:900px;
+      margin:36px auto;
+      padding:0 16px 56px;
+      line-height:1.6;
     }
 
-    .subtitle {
-      color: #555;
-      margin-bottom: 1rem;
+    a{ color:var(--link); text-decoration:none; }
+    a:hover{ text-decoration:underline; }
+
+    .topbar{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:14px;
     }
 
-    a {
-      color: #0066cc;
-      text-decoration: none;
+    .brand{
+      font-weight:700;
+      letter-spacing:.2px;
     }
 
-    a:hover {
-      text-decoration: underline;
+    .toggle{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      border:1px solid var(--border);
+      background:var(--card);
+      color:var(--text);
+      padding:8px 10px;
+      border-radius:10px;
+      cursor:pointer;
+      box-shadow:var(--shadow);
+      user-select:none;
     }
 
-    ul {
-      padding-left: 1.2rem;
+    .header{
+      display:flex;
+      align-items:center;
+      gap:18px;
+      flex-wrap:wrap;
+      padding:16px;
+      border:1px solid var(--border);
+      background:var(--card);
+      border-radius:16px;
+      box-shadow:var(--shadow);
     }
 
-    nav {
-      margin-bottom: 1.5rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 1px solid #ddd;
+    .avatar{
+      width:140px; height:140px;
+      border-radius:50%;
+      object-fit:cover;
+      border:2px solid var(--border);
+      display:block;
+      background:linear-gradient(135deg, rgba(0,0,0,.05), rgba(0,0,0,0));
     }
 
-    nav a {
-      margin-right: 14px;
-      font-size: 0.95rem;
+    h1{ margin:0; font-size:2.1rem; }
+    .subtitle{ margin:6px 0 0; color:var(--muted); }
+
+    /* Mobile nav */
+    .navwrap{
+      margin-top:14px;
+      border:1px solid var(--border);
+      background:var(--card);
+      border-radius:16px;
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+    .navhead{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:10px 12px;
+    }
+    .navbtn{
+      border:1px solid var(--border);
+      background:transparent;
+      color:var(--text);
+      padding:8px 10px;
+      border-radius:10px;
+      cursor:pointer;
+    }
+    nav{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      padding:10px 12px 14px;
+      border-top:1px solid var(--border);
+    }
+    nav a{
+      font-size:.95rem;
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background:rgba(0,0,0,.02);
+    }
+    [data-theme="dark"] nav a{ background:rgba(255,255,255,.03); }
+
+    /* Sections */
+    section{
+      margin-top:18px;
+      padding:16px;
+      border:1px solid var(--border);
+      background:var(--card);
+      border-radius:16px;
+      box-shadow:var(--shadow);
+    }
+    h2{ margin:0 0 10px; font-size:1.25rem; }
+    ul{ padding-left:18px; margin:10px 0 0; }
+
+    .button-link{
+      display:inline-block;
+      padding:10px 14px;
+      border:1px solid var(--btn);
+      border-radius:12px;
+      margin-top:8px;
+      color:var(--btn);
+    }
+    .button-link:hover{
+      background:var(--btn);
+      color:#fff;
+      text-decoration:none;
     }
 
-    .button-link {
-      display: inline-block;
-      padding: 8px 14px;
-      border: 1px solid #0066cc;
-      border-radius: 4px;
-      font-size: 0.95rem;
-      margin-top: 6px;
+    /* Publication cards */
+    .cards{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:12px;
+    }
+    .card{
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:14px;
+      background:rgba(0,0,0,.01);
+    }
+    [data-theme="dark"] .card{ background:rgba(255,255,255,.03); }
+    .card .meta{ color:var(--muted); font-size:.92rem; margin-top:4px; }
+
+    /* Better mobile spacing */
+    @media (min-width: 760px){
+      .cards{ grid-template-columns:1fr 1fr; }
+      h1{ font-size:2.3rem; }
     }
 
-    .button-link:hover {
-      background: #0066cc;
-      color: #fff;
-    }
-
-    .header {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      margin-bottom: 20px;
-      flex-wrap: wrap;
+    /* Collapse nav on small screens */
+    @media (max-width: 560px){
+      nav{ display:none; }
+      .navwrap.open nav{ display:flex; }
     }
   </style>
 </head>
 
 <body>
-
-  <!-- Header with Profile Image -->
-  <div class="header">
-    <img
-      src="./profile.jpg"
-      alt="Amina Salifu"
-      loading="lazy"
-      style="width:140px;height:140px;border-radius:50%;object-fit:cover;border:2px solid #ddd;display:block;"
-    />
-
-    <div>
-      <h1 style="margin-top:0;">Amina Salifu</h1>
-      <p class="subtitle">
-        PhD, Computer Engineering (KNUST)<br>
-        AI • NLP • Speech Technology • Inclusive AI
-      </p>
+  <div class="container">
+    <div class="topbar">
+      <div class="brand">Amina Salifu</div>
+      <button class="toggle" id="themeToggle" type="button" aria-label="Toggle dark mode">
+        <span id="themeIcon">🌙</span>
+        <span id="themeText">Dark</span>
+      </button>
     </div>
+
+    <div class="header">
+      <img
+        class="avatar"
+        src="./profile.jpg"
+        alt="Amina Salifu"
+        loading="lazy"
+        onerror="this.onerror=null; this.style.display='none'; document.getElementById('avatarFallback').style.display='grid';"
+      />
+      <div id="avatarFallback" style="display:none;width:140px;height:140px;border-radius:50%;border:2px solid var(--border);place-items:center;background:rgba(0,0,0,.04);font-weight:700;font-size:2rem;">
+        AS
+      </div>
+
+      <div>
+        <h1>Amina Salifu</h1>
+        <p class="subtitle">
+          PhD, Computer Engineering (KNUST)<br />
+          AI • NLP • Speech Technology • Inclusive AI
+        </p>
+      </div>
+    </div>
+
+    <div class="navwrap" id="navWrap">
+      <div class="navhead">
+        <div style="color:var(--muted);font-size:.95rem;">Navigation</div>
+        <button class="navbtn" id="navToggle" type="button">Menu</button>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#experience">Experience</a>
+        <a href="#communities">Communities</a>
+        <a href="#awards">Awards</a>
+        <a href="#internships">Internships</a>
+        <a href="#cv">CV</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+
+    <section id="about">
+      <h2>About</h2>
+      <p>
+        I am a researcher in Artificial Intelligence with a focus on speech processing,
+        accent modelling, inclusive AI systems for low-resource communities, and NLP for African languages.
+        My work explores how machine learning and large language models can improve speech and language technologies
+        for diverse linguistic populations.
+      </p>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <ul>
+        <li>PhD in Computer Engineering – KNUST</li>
+        <li>MSc in Mathematical Sciences – AIMS Senegal</li>
+        <li>BSc in Mathematical Sciences – UDS Ghana</li>
+      </ul>
+    </section>
+
+    <section id="research">
+      <h2>Research Interests</h2>
+      <ul>
+        <li>Natural Language Processing for low-resource African languages</li>
+        <li>Accent modelling, speech processing, and LLM-based speech systems</li>
+        <li>Inclusive and responsible AI for diverse linguistic communities</li>
+        <li>Large Language Models (LLMs) and fine-tuning for African contexts</li>
+        <li>IoT systems and optimisation of wireless sensor networks</li>
+        <li>Energy-efficient machine learning for smart and embedded devices</li>
+        <li>Machine learning in drug discovery and healthcare applications</li>
+      </ul>
+    </section>
+
+    <section id="publications">
+      <h2>Publications</h2>
+
+      <div class="cards">
+        <div class="card">
+          <a href="https://link.springer.com/chapter/10.1007/978-3-031-25271-6_3" target="_blank" rel="noopener">
+            Data Transmission Reduction in IoT Wireless Sensor Networks
+          </a>
+          <div class="meta">Springer • IoT • Wireless Sensor Networks</div>
+        </div>
+
+        <div class="card">
+          <a href="https://link.springer.com/article/10.1007/s10772-025-10198-w" target="_blank" rel="noopener">
+            Enhancing Speech Recognition through Diverse Shared Features
+          </a>
+          <div class="meta">Springer • Speech • Accent / ASR</div>
+        </div>
+
+        <div class="card">
+          <a href="https://link.springer.com/article/10.1007/s41060-025-00954-1" target="_blank" rel="noopener">
+            Systematic Review of Accent Classification Techniques
+          </a>
+          <div class="meta">Springer • Review • Accent Classification</div>
+        </div>
+
+        <div class="card">
+          <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/eng2.70320" target="_blank" rel="noopener">
+            Improving Speech Recognition for Ghanaian Accents using Transformers
+          </a>
+          <div class="meta">Wiley • Transformers • Ghanaian English</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2>Experience & Teaching</h2>
+      <ul>
+        <li>Artificial Intelligence and Machine Learning training for lecturers</li>
+        <li>AI training for senior high school teachers</li>
+        <li>Hands-on machine learning workshops for undergraduate and postgraduate students</li>
+      </ul>
+    </section>
+
+    <section id="communities">
+      <h2>AI Communities & Memberships</h2>
+      <ul>
+        <li>Ghana Data Science Summit</li>
+        <li>Women in Machine Learning (WiML) – Ghana Chapter</li>
+        <li>Masakhane – African NLP Community</li>
+        <li>AI Ghana</li>
+      </ul>
+    </section>
+
+    <section id="awards">
+      <h2>Awards & Scholarships</h2>
+      <ul>
+        <li>Scholarships supporting undergraduate, master's, and PhD studies</li>
+        <li>Best Poster Awards – Deep Learning Indaba</li>
+        <li>Best Poster Awards – Ghana Data Science Summit & IndabaX</li>
+        <li>NeurIPS 2024 Travel Support (Vancouver)</li>
+        <li>Multiple international conference travel grants</li>
+      </ul>
+    </section>
+
+    <section id="internships">
+      <h2>Internships</h2>
+      <ul>
+        <li>Hadniva Multimedia – Intern</li>
+        <li>Brigham Healthcare Service – Intern</li>
+        <li>Millennium Development Authority – Intern</li>
+        <li>Consolidated Bank Ghana – Intern</li>
+        <li>World Bank – Research Intern</li>
+      </ul>
+    </section>
+
+    <section id="cv">
+      <h2>Curriculum Vitae</h2>
+      <p>
+        <a class="button-link" href="./cv.pdf" target="_blank" rel="noopener">View Full CV (PDF)</a>
+      </p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>
+        Email: <a href="mailto:aminasalidu291@gmail.com">aminasalidu291@gmail.com</a><br />
+        GitHub: <a href="https://github.com/myna23" target="_blank" rel="noopener">myna23</a><br />
+        LinkedIn: <a href="https://www.linkedin.com/in/amina-salifu-7476311a3" target="_blank" rel="noopener">Profile</a>
+      </p>
+    </section>
   </div>
 
-  <!-- Navigation -->
-  <nav>
-    <a href="#about">About</a>
-    <a href="#education">Education</a>
-    <a href="#research">Research</a>
-    <a href="#publications">Publications</a>
-    <a href="#experience">Experience</a>
-    <a href="#communities">Communities</a>
-    <a href="#awards">Awards</a>
-    <a href="#internships">Internships</a>
-    <a href="#cv">CV</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <script>
+    // Mobile nav toggle
+    const navWrap = document.getElementById("navWrap");
+    document.getElementById("navToggle").addEventListener("click", () => {
+      navWrap.classList.toggle("open");
+    });
 
-  <!-- About -->
-  <section id="about">
-    <h2>About</h2>
-    <p>
-      I am a researcher in Artificial Intelligence with a focus on speech processing,
-      accent modelling, inclusive AI systems for low-resource communities, and NLP for African languages.
-      My work explores how machine learning and large language models can improve speech and language technologies
-      for diverse linguistic populations.
-    </p>
-  </section>
+    // Theme toggle with persistence
+    const root = document.documentElement;
+    const themeToggle = document.getElementById("themeToggle");
+    const themeIcon = document.getElementById("themeIcon");
+    const themeText = document.getElementById("themeText");
 
-  <!-- Education -->
-  <section id="education">
-    <h2>Education</h2>
-    <ul>
-      <li>PhD in Computer Engineering – KNUST</li>
-      <li>MSc in Mathematical Sciences – AIMS Senegal</li>
-      <li>BSc in Mathematical Sciences – UDS Ghana</li>
-    </ul>
-  </section>
+    function setTheme(theme){
+      root.setAttribute("data-theme", theme);
+      localStorage.setItem("theme", theme);
+      const isDark = theme === "dark";
+      themeIcon.textContent = isDark ? "☀️" : "🌙";
+      themeText.textContent = isDark ? "Light" : "Dark";
+    }
 
-  <!-- Research -->
-  <section id="research">
-    <h2>Research Interests</h2>
-    <ul>
-      <li>Natural Language Processing for low-resource African languages</li>
-      <li>Accent modelling and speech processing</li>
-      <li>Inclusive and responsible AI</li>
-      <li>Large Language Models for African contexts</li>
-      <li>IoT systems and energy-efficient ML</li>
-    </ul>
-  </section>
+    const saved = localStorage.getItem("theme");
+    const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+    setTheme(saved || (prefersDark ? "dark" : "light"));
 
-  <!-- Publications -->
-  <section id="publications">
-    <h2>Publications</h2>
-    <ul>
-      <li><a href="https://link.springer.com/chapter/10.1007/978-3-031-25271-6_3" target="_blank">Data Transmission Reduction in IoT Wireless Sensor Networks</a></li>
-      <li><a href="https://link.springer.com/article/10.1007/s10772-025-10198-w" target="_blank">Enhancing Speech Recognition through Diverse Shared Features</a></li>
-      <li><a href="https://link.springer.com/article/10.1007/s41060-025-00954-1" target="_blank">Systematic Review of Accent Classification Techniques</a></li>
-      <li><a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/eng2.70320" target="_blank">Improving Speech Recognition for Ghanaian Accents using Transformers</a></li>
-    </ul>
-  </section>
-
-  <!-- Experience -->
-  <section id="experience">
-    <h2>Experience & Teaching</h2>
-    <ul>
-      <li>AI & ML training for lecturers and teachers</li>
-      <li>Hands-on workshops for undergraduate and postgraduate students</li>
-      <li>Mentorship in inclusive AI and speech technologies</li>
-    </ul>
-  </section>
-
-  <!-- Communities -->
-  <section id="communities">
-    <h2>AI Communities & Memberships</h2>
-    <ul>
-      <li>Masakhane – African NLP</li>
-      <li>Women in Machine Learning (WiML)</li>
-      <li>AI Ghana</li>
-      <li>Ghana Data Science Summit</li>
-    </ul>
-  </section>
-
-  <!-- Awards -->
-  <section id="awards">
-    <h2>Awards & Scholarships</h2>
-    <ul>
-      <li>Multiple academic scholarships</li>
-      <li>Best Poster Awards – Deep Learning Indaba</li>
-      <li>NeurIPS 2024 Travel Grant</li>
-    </ul>
-  </section>
-
-  <!-- Internships -->
-  <section id="internships">
-    <h2>Internships</h2>
-    <ul>
-      <li>World Bank – Research Intern</li>
-      <li>Consolidated Bank Ghana</li>
-      <li>Millennium Development Authority</li>
-    </ul>
-  </section>
-
-  <!-- CV -->
-  <section id="cv">
-    <h2>Curriculum Vitae</h2>
-    <a class="button-link" href="cv.pdf" target="_blank">View Full CV (PDF)</a>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>
-      Email: <a href="mailto:aminasalidu291@gmail.com">aminasalidu291@gmail.com</a><br>
-      GitHub: <a href="https://github.com/myna23" target="_blank">myna23</a><br>
-      LinkedIn: <a href="https://www.linkedin.com/in/amina-salifu-7476311a3" target="_blank">Profile</a>
-    </p>
-  </section>
-
+    themeToggle.addEventListener("click", () => {
+      const current = root.getAttribute("data-theme") || "light";
+      setTheme(current === "dark" ? "light" : "dark");
+    });
+  </script>
 </body>
 </html>
