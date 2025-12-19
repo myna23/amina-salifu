@@ -4,20 +4,22 @@
   <meta charset="UTF-8" />
   <title>Amina Salifu – AI & NLP Researcher</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- SEO -->
   <meta name="description" content="Amina Salifu — AI, NLP, Speech Technology, and Inclusive AI researcher. Publications, research interests, and contact." />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://myna23.github.io/amina-salifu/" />
 
-  <!-- Open Graph / LinkedIn -->
+  <!-- Open Graph -->
   <meta property="og:title" content="Amina Salifu – AI & NLP Researcher" />
-  <meta property="og:description" content="AI • NLP • Speech Technology • Inclusive AI — Publications, research interests, and contact." />
+  <meta property="og:description" content="AI • NLP • Speech Technology • Inclusive AI" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://myna23.github.io/amina-salifu/" />
 
   <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Amina Salifu – AI & NLP Researcher" />
-  <meta name="twitter:description" content="AI • NLP • Speech Technology • Inclusive AI — Publications, research interests, and contact." />
+  <meta name="twitter:description" content="AI • NLP • Speech Technology • Inclusive AI" />
 
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -50,10 +52,10 @@
     }
 
     body{
+      margin:0;
       font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
       background:var(--bg);
       color:var(--text);
-      margin:0;
     }
 
     .container{
@@ -66,7 +68,7 @@
     a{ color:var(--link); text-decoration:none; }
     a:hover{ text-decoration:underline; }
 
-    /* TOP BAR (right aligned controls) */
+    /* Top bar */
     .topbar{
       display:flex;
       justify-content:flex-end;
@@ -78,33 +80,32 @@
       display:inline-flex;
       align-items:center;
       gap:8px;
+      padding:8px 12px;
+      border-radius:10px;
       border:1px solid var(--border);
       background:var(--card);
-      color:var(--text);
-      padding:8px 10px;
-      border-radius:10px;
       cursor:pointer;
       box-shadow:var(--shadow);
-      user-select:none;
     }
 
+    /* Header */
     .header{
-      padding:18px;
-      border:1px solid var(--border);
-      background:var(--card);
+      padding:20px;
       border-radius:16px;
+      background:var(--card);
+      border:1px solid var(--border);
       box-shadow:var(--shadow);
     }
 
-    h1{ margin:0; font-size:2.1rem; }
-    .subtitle{ margin:8px 0 0; color:var(--muted); }
+    h1{ margin:0; font-size:2.2rem; }
+    .subtitle{ margin-top:8px; color:var(--muted); }
 
-    /* NAV (collapsed by default) */
+    /* Navigation */
     .navwrap{
       margin-top:14px;
-      border:1px solid var(--border);
-      background:var(--card);
       border-radius:16px;
+      background:var(--card);
+      border:1px solid var(--border);
       box-shadow:var(--shadow);
       overflow:hidden;
     }
@@ -112,73 +113,61 @@
     .navhead{
       padding:10px 12px;
       color:var(--muted);
-      font-size:.95rem;
       border-bottom:1px solid var(--border);
     }
 
     nav{
       display:none;
-      flex-wrap:wrap;
-      gap:10px;
       padding:12px;
+      gap:10px;
+      flex-wrap:wrap;
     }
 
-    .navwrap.open nav{
-      display:flex;
-    }
+    .navwrap.open nav{ display:flex; }
 
     nav a{
-      font-size:.95rem;
-      padding:6px 10px;
+      padding:6px 12px;
       border-radius:999px;
       border:1px solid var(--border);
+      font-size:.95rem;
       background:rgba(0,0,0,.02);
     }
-    [data-theme="dark"] nav a{ background:rgba(255,255,255,.03); }
+
+    [data-theme="dark"] nav a{ background:rgba(255,255,255,.04); }
 
     section{
       margin-top:18px;
-      padding:16px;
-      border:1px solid var(--border);
-      background:var(--card);
+      padding:18px;
       border-radius:16px;
+      background:var(--card);
+      border:1px solid var(--border);
       box-shadow:var(--shadow);
     }
-    h2{ margin:0 0 10px; font-size:1.25rem; }
-    ul{ padding-left:18px; margin:10px 0 0; }
 
-    .button-link{
-      display:inline-block;
-      padding:10px 14px;
-      border:1px solid var(--btn);
-      border-radius:12px;
-      margin-top:8px;
-      color:var(--btn);
-    }
-    .button-link:hover{
-      background:var(--btn);
-      color:#fff;
-      text-decoration:none;
-    }
+    h2{ margin:0 0 10px; font-size:1.3rem; }
 
-    /* Publication cards */
+    ul{ padding-left:18px; }
+
+    /* Publications cards */
     .cards{
       display:grid;
-      grid-template-columns:1fr;
       gap:12px;
+      grid-template-columns:1fr;
     }
-    .card{
-      border:1px solid var(--border);
-      border-radius:16px;
-      padding:14px;
-      background:rgba(0,0,0,.01);
-    }
-    [data-theme="dark"] .card{ background:rgba(255,255,255,.03); }
-    .card .meta{ color:var(--muted); font-size:.92rem; margin-top:4px; }
 
-    @media (min-width: 760px){
+    .card{
+      padding:14px;
+      border-radius:16px;
+      border:1px solid var(--border);
+      background:rgba(0,0,0,.02);
+    }
+
+    [data-theme="dark"] .card{ background:rgba(255,255,255,.04); }
+
+    .meta{ font-size:.9rem; color:var(--muted); margin-top:4px; }
+
+    @media (min-width:760px){
       .cards{ grid-template-columns:1fr 1fr; }
-      h1{ font-size:2.3rem; }
     }
   </style>
 </head>
@@ -186,27 +175,25 @@
 <body>
   <div class="container">
 
-    <!-- Top-right controls: Menu + Theme -->
+    <!-- Controls -->
     <div class="topbar">
-      <button class="pillbtn" id="menuToggle" type="button" aria-label="Toggle menu">
-        ☰ <span>Menu</span>
-      </button>
-
-      <button class="pillbtn" id="themeToggle" type="button" aria-label="Toggle dark mode">
-        <span id="themeIcon"> </span>
+      <button class="pillbtn" id="menuToggle">☰ Menu</button>
+      <button class="pillbtn" id="themeToggle">
+        <span id="themeIcon">🌙</span>
         <span id="themeText">Dark</span>
       </button>
     </div>
 
+    <!-- Header -->
     <div class="header">
       <h1>Amina Salifu</h1>
       <p class="subtitle">
-        PhD, Computer Engineering (KNUST)<br />
+        PhD, Computer Engineering (KNUST)<br>
         AI • NLP • Speech Technology • Inclusive AI
       </p>
     </div>
 
-    <!-- Collapsible nav -->
+    <!-- Navigation -->
     <div class="navwrap" id="navWrap">
       <div class="navhead">Navigation</div>
       <nav id="siteNav">
@@ -223,169 +210,128 @@
       </nav>
     </div>
 
+    <!-- About -->
     <section id="about">
       <h2>About</h2>
       <p>
         I am a researcher in Artificial Intelligence with a focus on speech processing,
         accent modelling, inclusive AI systems for low-resource communities, and NLP for African languages.
-        My work explores how machine learning and large language models can improve speech and language technologies
-        for diverse linguistic populations.
       </p>
     </section>
 
+    <!-- Education -->
     <section id="education">
       <h2>Education</h2>
       <ul>
-        <li>PhD in Computer Engineering – KNUST</li>
-        <li>MSc in Mathematical Sciences – AIMS Senegal</li>
-        <li>BSc in Mathematical Sciences – UDS Ghana</li>
+        <li>
+          <strong>PhD in Computer Engineering</strong> —
+          <a href="https://www.knust.edu.gh/" target="_blank" rel="noopener">
+            Kwame Nkrumah University of Science and Technology (KNUST)
+          </a><br>
+          <span style="color:var(--muted);">
+            Research affiliation:
+            <a href="https://rail.knust.edu.gh/" target="_blank" rel="noopener">
+              Responsible Artificial Intelligence Lab (RAIL)
+            </a>
+          </span>
+        </li>
+        <li>
+          <strong>MSc in Mathematical Sciences</strong> —
+          <a href="https://aims-senegal.org/" target="_blank" rel="noopener">
+            African Institute for Mathematical Sciences (AIMS), Senegal
+          </a>
+        </li>
+        <li>
+          <strong>BSc in Mathematical Sciences</strong> —
+          <a href="https://www.uds.edu.gh/" target="_blank" rel="noopener">
+            University for Development Studies (UDS), Ghana
+          </a>
+        </li>
       </ul>
     </section>
 
+    <!-- Research -->
     <section id="research">
       <h2>Research Interests</h2>
       <ul>
-        <li>Natural Language Processing for low-resource African languages</li>
-        <li>Accent modelling, speech processing, and LLM-based speech systems</li>
-        <li>Inclusive and responsible AI for diverse linguistic communities</li>
-        <li>Large Language Models (LLMs) and fine-tuning for African contexts</li>
-        <li>IoT systems and optimisation of wireless sensor networks</li>
-        <li>Energy-efficient machine learning for smart and embedded devices</li>
-        <li>Machine learning in drug discovery and healthcare applications</li>
+        <li>NLP for low-resource African languages</li>
+        <li>Accent modelling and speech processing</li>
+        <li>Inclusive and responsible AI</li>
+        <li>Large Language Models for African contexts</li>
       </ul>
     </section>
 
+    <!-- Publications -->
     <section id="publications">
       <h2>Publications</h2>
-
       <div class="cards">
         <div class="card">
-          <a href="https://link.springer.com/chapter/10.1007/978-3-031-25271-6_3" target="_blank" rel="noopener">
+          <a href="https://link.springer.com/chapter/10.1007/978-3-031-25271-6_3" target="_blank">
             Data Transmission Reduction in IoT Wireless Sensor Networks
           </a>
-          <div class="meta">Springer • IoT • Wireless Sensor Networks</div>
+          <div class="meta">Springer</div>
         </div>
-
         <div class="card">
-          <a href="https://link.springer.com/article/10.1007/s10772-025-10198-w" target="_blank" rel="noopener">
+          <a href="https://link.springer.com/article/10.1007/s10772-025-10198-w" target="_blank">
             Enhancing Speech Recognition through Diverse Shared Features
           </a>
-          <div class="meta">Springer • Speech • Accent / ASR</div>
+          <div class="meta">Springer</div>
         </div>
-
         <div class="card">
-          <a href="https://link.springer.com/article/10.1007/s41060-025-00954-1" target="_blank" rel="noopener">
+          <a href="https://link.springer.com/article/10.1007/s41060-025-00954-1" target="_blank">
             Systematic Review of Accent Classification Techniques
           </a>
-          <div class="meta">Springer • Review • Accent Classification</div>
+          <div class="meta">Springer</div>
         </div>
-
         <div class="card">
-          <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/eng2.70320" target="_blank" rel="noopener">
+          <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/eng2.70320" target="_blank">
             Improving Speech Recognition for Ghanaian Accents using Transformers
           </a>
-          <div class="meta">Wiley • Transformers • Ghanaian English</div>
+          <div class="meta">Wiley</div>
         </div>
       </div>
     </section>
 
-    <section id="experience">
-      <h2>Experience & Teaching</h2>
-      <ul>
-        <li>Artificial Intelligence and Machine Learning training for lecturers</li>
-        <li>AI training for senior high school teachers</li>
-        <li>Hands-on machine learning workshops for undergraduate and postgraduate students</li>
-      </ul>
-    </section>
-
-    <section id="communities">
-      <h2>AI Communities & Memberships</h2>
-      <ul>
-        <li>Ghana Data Science Summit</li>
-        <li>Women in Machine Learning (WiML) – Ghana Chapter</li>
-        <li>Masakhane – African NLP Community</li>
-        <li>AI Ghana</li>
-      </ul>
-    </section>
-
-    <section id="awards">
-      <h2>Awards & Scholarships</h2>
-      <ul>
-        <li>Scholarships supporting undergraduate, master's, and PhD studies</li>
-        <li>Best Poster Awards – Deep Learning Indaba</li>
-        <li>Best Poster Awards – Ghana Data Science Summit & IndabaX</li>
-        <li>NeurIPS 2024 Travel Support (Vancouver)</li>
-        <li>Multiple international conference travel grants</li>
-      </ul>
-    </section>
-
-    <section id="internships">
-      <h2>Internships</h2>
-      <ul>
-        <li>Hadniva Multimedia – Intern</li>
-        <li>Brigham Healthcare Service – Intern</li>
-        <li>Millennium Development Authority – Intern</li>
-        <li>Consolidated Bank Ghana – Intern</li>
-        <li>World Bank – Research Intern</li>
-      </ul>
-    </section>
-
+    <!-- CV -->
     <section id="cv">
       <h2>Curriculum Vitae</h2>
-      <p>
-        <a class="button-link" href="./cv.pdf" target="_blank" rel="noopener">View Full CV (PDF)</a>
-      </p>
+      <a href="./cv.pdf" target="_blank">View Full CV (PDF)</a>
     </section>
 
+    <!-- Contact -->
     <section id="contact">
       <h2>Contact</h2>
       <p>
-        Email: <a href="mailto:aminasalidu291@gmail.com">aminasalidu291@gmail.com</a><br />
-        GitHub: <a href="https://github.com/myna23" target="_blank" rel="noopener">myna23</a><br />
-        LinkedIn: <a href="https://www.linkedin.com/in/amina-salifu-7476311a3" target="_blank" rel="noopener">Profile</a>
+        Email: <a href="mailto:aminasalidu291@gmail.com">aminasalidu291@gmail.com</a><br>
+        GitHub: <a href="https://github.com/myna23" target="_blank">myna23</a><br>
+        LinkedIn: <a href="https://www.linkedin.com/in/amina-salifu-7476311a3" target="_blank">Profile</a>
       </p>
     </section>
+
   </div>
 
   <script>
-    // Menu toggle (works on desktop + mobile)
     const navWrap = document.getElementById("navWrap");
-    const menuToggle = document.getElementById("menuToggle");
-    const siteNav = document.getElementById("siteNav");
-
-    menuToggle.addEventListener("click", () => {
+    document.getElementById("menuToggle").onclick = () =>
       navWrap.classList.toggle("open");
-    });
 
-    //  Auto-close menu when any nav link is clicked
-    siteNav.addEventListener("click", (e) => {
-      const link = e.target.closest("a");
-      if (!link) return;
+    document.getElementById("siteNav").onclick = () =>
       navWrap.classList.remove("open");
-    });
 
-    // Theme toggle with persistence
     const root = document.documentElement;
-    const themeToggle = document.getElementById("themeToggle");
-    const themeIcon = document.getElementById("themeIcon");
-    const themeText = document.getElementById("themeText");
+    const icon = document.getElementById("themeIcon");
+    const text = document.getElementById("themeText");
 
-    function setTheme(theme){
-      root.setAttribute("data-theme", theme);
-      localStorage.setItem("theme", theme);
-      const isDark = theme === "dark";
-      themeIcon.textContent = isDark ? "" : "";
-      themeText.textContent = isDark ? "Light" : "Dark";
+    function setTheme(t){
+      root.setAttribute("data-theme", t);
+      localStorage.setItem("theme", t);
+      icon.textContent = t === "dark" ? "☀️" : "🌙";
+      text.textContent = t === "dark" ? "Light" : "Dark";
     }
 
-    const saved = localStorage.getItem("theme");
-    const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
-    setTheme(saved || (prefersDark ? "dark" : "light"));
-
-    themeToggle.addEventListener("click", () => {
-      const current = root.getAttribute("data-theme") || "light";
-      setTheme(current === "dark" ? "light" : "dark");
-    });
+    setTheme(localStorage.getItem("theme") || "light");
+    document.getElementById("themeToggle").onclick = () =>
+      setTheme(root.getAttribute("data-theme") === "dark" ? "light" : "dark");
   </script>
 </body>
 </html>
