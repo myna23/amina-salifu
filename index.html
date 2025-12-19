@@ -13,15 +13,13 @@
   <meta property="og:description" content="AI • NLP • Speech Technology • Inclusive AI — Publications, research interests, and contact." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://myna23.github.io/amina-salifu/" />
-  <meta property="og:image" content="https://myna23.github.io/amina-salifu/profile.jpg" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Amina Salifu – AI & NLP Researcher" />
-  <meta name="twitter:description" content=" AI • NLP • Speech Technology • Inclusive AI — Publications, research interests, and contact." />
-  <meta name="twitter:image" content="https://myna23.github.io/amina-salifu/profile.jpg" />
+  <meta name="twitter:description" content="AI • NLP • Speech Technology • Inclusive AI — Publications, research interests, and contact." />
 
-  <!-- Structured Data (Google indexing) -->
+  <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -29,7 +27,6 @@
     "name": "Amina Salifu",
     "jobTitle": "AI & NLP Researcher",
     "url": "https://myna23.github.io/amina-salifu/",
-    "image": "https://myna23.github.io/amina-salifu/profile.jpg",
     "email": "mailto:aminasalidu291@gmail.com",
     "sameAs": [
       "https://github.com/myna23",
@@ -69,20 +66,15 @@
     a{ color:var(--link); text-decoration:none; }
     a:hover{ text-decoration:underline; }
 
+    /* TOP BAR (right aligned controls) */
     .topbar{
       display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:12px;
+      justify-content:flex-end;
+      gap:10px;
       margin-bottom:14px;
     }
 
-    .brand{
-      font-weight:700;
-      letter-spacing:.2px;
-    }
-
-    .toggle{
+    .pillbtn{
       display:inline-flex;
       align-items:center;
       gap:8px;
@@ -97,30 +89,17 @@
     }
 
     .header{
-      display:flex;
-      align-items:center;
-      gap:18px;
-      flex-wrap:wrap;
-      padding:16px;
+      padding:18px;
       border:1px solid var(--border);
       background:var(--card);
       border-radius:16px;
       box-shadow:var(--shadow);
     }
 
-    .avatar{
-      width:140px; height:140px;
-      border-radius:50%;
-      object-fit:cover;
-      border:2px solid var(--border);
-      display:block;
-      background:linear-gradient(135deg, rgba(0,0,0,.05), rgba(0,0,0,0));
-    }
-
     h1{ margin:0; font-size:2.1rem; }
-    .subtitle{ margin:6px 0 0; color:var(--muted); }
+    .subtitle{ margin:8px 0 0; color:var(--muted); }
 
-    /* Mobile nav */
+    /* NAV (collapsed by default) */
     .navwrap{
       margin-top:14px;
       border:1px solid var(--border);
@@ -129,27 +108,25 @@
       box-shadow:var(--shadow);
       overflow:hidden;
     }
+
     .navhead{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
       padding:10px 12px;
+      color:var(--muted);
+      font-size:.95rem;
+      border-bottom:1px solid var(--border);
     }
-    .navbtn{
-      border:1px solid var(--border);
-      background:transparent;
-      color:var(--text);
-      padding:8px 10px;
-      border-radius:10px;
-      cursor:pointer;
-    }
+
     nav{
-      display:flex;
+      display:none;
       flex-wrap:wrap;
       gap:10px;
-      padding:10px 12px 14px;
-      border-top:1px solid var(--border);
+      padding:12px;
     }
+
+    .navwrap.open nav{
+      display:flex;
+    }
+
     nav a{
       font-size:.95rem;
       padding:6px 10px;
@@ -159,7 +136,6 @@
     }
     [data-theme="dark"] nav a{ background:rgba(255,255,255,.03); }
 
-    /* Sections */
     section{
       margin-top:18px;
       padding:16px;
@@ -200,57 +176,40 @@
     [data-theme="dark"] .card{ background:rgba(255,255,255,.03); }
     .card .meta{ color:var(--muted); font-size:.92rem; margin-top:4px; }
 
-    /* Better mobile spacing */
     @media (min-width: 760px){
       .cards{ grid-template-columns:1fr 1fr; }
       h1{ font-size:2.3rem; }
-    }
-
-    /* Collapse nav on small screens */
-    @media (max-width: 560px){
-      nav{ display:none; }
-      .navwrap.open nav{ display:flex; }
     }
   </style>
 </head>
 
 <body>
   <div class="container">
+
+    <!-- Top-right controls: Menu + Theme -->
     <div class="topbar">
-      <div class="brand">Amina Salifu</div>
-      <button class="toggle" id="themeToggle" type="button" aria-label="Toggle dark mode">
-        <span id="themeIcon">🌙</span>
+      <button class="pillbtn" id="menuToggle" type="button" aria-label="Toggle menu">
+        ☰ <span>Menu</span>
+      </button>
+
+      <button class="pillbtn" id="themeToggle" type="button" aria-label="Toggle dark mode">
+        <span id="themeIcon"> </span>
         <span id="themeText">Dark</span>
       </button>
     </div>
 
     <div class="header">
-      <img
-        class="avatar"
-        src="./profile.jpg"
-        alt="Amina Salifu"
-        loading="lazy"
-        onerror="this.onerror=null; this.style.display='none'; document.getElementById('avatarFallback').style.display='grid';"
-      />
-      <div id="avatarFallback" style="display:none;width:140px;height:140px;border-radius:50%;border:2px solid var(--border);place-items:center;background:rgba(0,0,0,.04);font-weight:700;font-size:2rem;">
-        AS
-      </div>
-
-      <div>
-        <h1>Amina Salifu</h1>
-        <p class="subtitle">
-          PhD, Computer Engineering (KNUST)<br />
-          AI • NLP • Speech Technology • Inclusive AI
-        </p>
-      </div>
+      <h1>Amina Salifu</h1>
+      <p class="subtitle">
+        PhD, Computer Engineering (KNUST)<br />
+        AI • NLP • Speech Technology • Inclusive AI
+      </p>
     </div>
 
+    <!-- Collapsible nav -->
     <div class="navwrap" id="navWrap">
-      <div class="navhead">
-        <div style="color:var(--muted);font-size:.95rem;">Navigation</div>
-        <button class="navbtn" id="navToggle" type="button">Menu</button>
-      </div>
-      <nav>
+      <div class="navhead">Navigation</div>
+      <nav id="siteNav">
         <a href="#about">About</a>
         <a href="#education">Education</a>
         <a href="#research">Research</a>
@@ -389,10 +348,20 @@
   </div>
 
   <script>
-    // Mobile nav toggle
+    // Menu toggle (works on desktop + mobile)
     const navWrap = document.getElementById("navWrap");
-    document.getElementById("navToggle").addEventListener("click", () => {
+    const menuToggle = document.getElementById("menuToggle");
+    const siteNav = document.getElementById("siteNav");
+
+    menuToggle.addEventListener("click", () => {
       navWrap.classList.toggle("open");
+    });
+
+    //  Auto-close menu when any nav link is clicked
+    siteNav.addEventListener("click", (e) => {
+      const link = e.target.closest("a");
+      if (!link) return;
+      navWrap.classList.remove("open");
     });
 
     // Theme toggle with persistence
@@ -405,7 +374,7 @@
       root.setAttribute("data-theme", theme);
       localStorage.setItem("theme", theme);
       const isDark = theme === "dark";
-      themeIcon.textContent = isDark ? "☀️" : "🌙";
+      themeIcon.textContent = isDark ? "" : "";
       themeText.textContent = isDark ? "Light" : "Dark";
     }
 
